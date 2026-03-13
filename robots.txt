@@ -1,0 +1,30 @@
+# =============================================================
+# robots.txt for Unnnati dashboard
+# =============================================================
+
+User-agent: *
+Allow: /index.php
+Allow: /resume.pdf
+Allow: /uploads/*.png
+Allow: /uploads/*.jpg
+Allow: /uploads/*.jpeg
+Allow: /uploads/*.gif
+Allow: /uploads/icon-*.png
+
+Disallow: /login.php
+Disallow: /register.php
+Disallow: /logout.php
+Disallow: /dashboard.php
+Disallow: /inventory.php
+Disallow: /sales.php
+Disallow: /assets.php
+Disallow: /unnnati.php
+Disallow: /config*
+Disallow: /uploads/            # block direct access to folder listing
+Disallow: /*.php$              # optional: try to block all .php except the ones explicitly allowed above
+
+# Sitemap (create later if you want)
+# Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl-delay (optional - helps shared hosting not get overwhelmed)
+Crawl-delay: 10
