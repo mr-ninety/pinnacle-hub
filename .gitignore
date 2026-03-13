@@ -1,0 +1,51 @@
+# -------------------------------
+# Sensitive / secret files
+# -------------------------------
+config.php
+config.local.php
+config.example.php   # keep the example, but never commit real config with passwords
+
+# -------------------------------
+# Uploads & user-generated content
+# -------------------------------
+uploads/*
+!uploads/.gitkeep     # optional: keep empty folder structure
+
+# -------------------------------
+# Common dev / editor junk
+# -------------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+
+# -------------------------------
+# IDE / editor folders
+# -------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -------------------------------
+# Local testing / build artifacts
+# -------------------------------
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+yarn.lock
+
+# -------------------------------
+# Database dumps (if you create them locally)
+# -------------------------------
+*.sql.bak
+dump_*.sql
+
+# -------------------------------
+# Optional: ignore resume if it contains personal info
+# -------------------------------
+resume.pdf
