@@ -1,0 +1,134 @@
+/* =============================================================
+   Unnnati – Custom Styles (on top of Tailwind CDN)
+   ============================================================= */
+
+/* === Dark / Light mode root variables === */
+:root {
+  --bg-primary: #0f172a;      /* slate-950 */
+  --bg-secondary: #1e293b;    /* slate-800 */
+  --text-primary: #f1f5f9;    /* slate-100 */
+  --text-secondary: #94a3b8;  /* slate-400 */
+  --accent: #10b981;          /* emerald-500 */
+  --accent-dark: #059669;     /* emerald-700 */
+  --card-bg: #1e293b;
+  --border: #334155;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --card-bg: #ffffff;
+  --border: #cbd5e1;
+}
+
+/* === Global resets & base === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Smooth scroll padding for fixed navbar */
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* === Card component base === */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* === Button variants === */
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* === Table styling === */
+.table-auto th,
+.table-auto td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.table-auto thead th {
+  background-color: rgba(30, 41, 59, 0.6);
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* === Scrollbar (modern look) === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+/* === Dark mode toggle button === */
+.theme-toggle {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .card {
+    border-radius: 0.75rem;
+  }
+}
